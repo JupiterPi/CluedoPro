@@ -18,6 +18,10 @@ public class MysteryCard {
     }
 
     enum MysteryCardType {
-        SUSPECT, ITEM, LOCATION;
+        SUSPECT, ITEM, LOCATION
+    }
+
+    public String toString() {
+        return name;
     }
 }
