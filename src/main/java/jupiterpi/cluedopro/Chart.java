@@ -7,7 +7,7 @@ public class Chart {
     Map<MysteryCard, ChartEntry> entries = new HashMap<>();
 
     public Chart() {
-        StaticResourcesManager.getMysteryCards().forEach((mysteryCard) -> {
+        StaticResources.getMysteryCards().forEach((mysteryCard) -> {
             entries.put(mysteryCard, new ChartEntry(mysteryCard));
         });
     }

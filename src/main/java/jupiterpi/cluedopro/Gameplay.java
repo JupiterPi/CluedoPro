@@ -12,7 +12,7 @@ public class Gameplay {
     public static Player play() {
         // pre-initiation
         game = new Game();
-        StaticResourcesManager.load();
+        StaticResources.load();
 
         // welcome
         out("Welcome to CluedoPro!");
@@ -22,7 +22,7 @@ public class Gameplay {
 
         dnewline();
         out("finished");
-        return null;
+        return game.getComputer();
     }
 
     private static void initiate() {
@@ -83,7 +83,7 @@ public class Gameplay {
         List<MysteryCard> mysteryCards = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             String mysteryCardName = in("Add one of the computer's mystery cards: ");
-            mysteryCards.add(StaticResourcesManager.findMysteryCardByName(mysteryCardName));
+            mysteryCards.add(StaticResources.findMysteryCardByName(mysteryCardName));
         }
         game.getComputer().addMysteryCards(mysteryCards);
 

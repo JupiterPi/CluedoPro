@@ -7,8 +7,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StaticResourcesManager {
+public class StaticResources {
     static List<MysteryCard> mysteryCards = new ArrayList<>();
+    public static final float TURN = 4.5f;
 
     public static void load() {
         File resourceFile = getResourceFile("mysteryCards.txt");
@@ -33,7 +34,7 @@ public class StaticResourcesManager {
     }
 
     private static File getResourceFile(String fileName) {
-        ClassLoader classLoader = StaticResourcesManager.class.getClassLoader();
+        ClassLoader classLoader = StaticResources.class.getClassLoader();
         URL resource = classLoader.getResource(fileName);
         if (resource == null) {
             throw new IllegalArgumentException("File not found!");

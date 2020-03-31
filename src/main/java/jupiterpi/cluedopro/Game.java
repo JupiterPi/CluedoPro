@@ -22,7 +22,7 @@ public class Game {
     public void addComputersMysteryCards(List<String> mysteryCardNames) {
         List<MysteryCard> mysteryCards = new ArrayList<>();
         mysteryCardNames.forEach((mysteryCardName) -> {
-            mysteryCards.add(StaticResourcesManager.findMysteryCardByName(mysteryCardName));
+            mysteryCards.add(StaticResources.findMysteryCardByName(mysteryCardName));
         });
         computer.addMysteryCards(mysteryCards);
     }
