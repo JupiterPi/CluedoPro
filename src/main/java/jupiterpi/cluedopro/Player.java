@@ -6,6 +6,7 @@ import java.util.List;
 public class Player {
     String name;
     PlayerColor color;
+    Field position;
 
     public Player(String name, PlayerColor color) {
         this.name = name;
@@ -15,6 +16,14 @@ public class Player {
     public static List<PlayerColor> getColors() {
         PlayerColor[] colors = PlayerColor.class.getEnumConstants();
         return Arrays.asList(colors);
+    }
+
+    public Field getPosition() {
+        return position;
+    }
+
+    public void move(Field position) {
+        this.position = position;
     }
 
     enum PlayerColor {

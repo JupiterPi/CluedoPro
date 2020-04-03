@@ -4,22 +4,16 @@ import jupiterpi.cluedopro.filetool.FileTool;
 
 import java.io.File;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 public class StaticResources {
-    static List<MysteryCard> mysteryCards = new ArrayList<>();
+    static List<MysteryCard> mysteryCards;
     public static final float TURN = 4.5f;
+    static List<Field> fields;
 
     public static void load() {
-        File resourceFile = getResourceFile("mysteryCards.txt");
-        FileTool fileTool = new FileTool(resourceFile);
-        List<String> mysteryCardsData = fileTool.getFile();
-        mysteryCardsData.forEach((line) -> {
-            String[] lineParts = line.split(";");
-            MysteryCard.MysteryCardType type = MysteryCard.MysteryCardType.valueOf(lineParts[0]);
-            mysteryCards.add(new MysteryCard(type, lineParts[1]));
-        });
+        mysteryCards = MysteryCard.load();
+        fields = Field.load();
     }
 
     public static List<MysteryCard> getMysteryCards() {
@@ -33,13 +27,26 @@ public class StaticResources {
         return null;
     }
 
-    private static File getResourceFile(String fileName) {
+    public static MysteryCard findMysteryCardByShortName(String shortName) {
+        for (MysteryCard mysteryCard : mysteryCards) {
+            if (mysteryCard.getShortName().equals(shortName)) return mysteryCard;
+        }
+        return null;
+    }
+
+    public static List<Field> getFields() {
+        return fields;
+    }
+
+    public static FileTool getResourceFile(String fileName) {
         ClassLoader classLoader = StaticResources.class.getClassLoader();
         URL resource = classLoader.getResource(fileName);
         if (resource == null) {
             throw new IllegalArgumentException("File not found!");
         } else {
-            return new File(resource.getFile());
+            File file = new File(resource.getFile());
+            FileTool fileTool = new FileTool(file);
+            return fileTool;
         }
     }
 }

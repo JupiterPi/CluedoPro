@@ -1,21 +1,21 @@
-SUSPECT;Fenrir Greyback
-SUSPECT;Lucius Malfoy
-SUSPECT;Peter Pettigrew
-SUSPECT;Draco Malfoy
-SUSPECT;Greifer
-SUSPECT;Bellatrix Lestrange
-ITEM;Verhexter Besen
-ITEM;Verfluchte Halskette
-ITEM;Liebestrank
-ITEM;Vergifteter Met
-ITEM;Incendio
-ITEM;Stupor
-LOCATION;Herrenhaus der Malfoys
-LOCATION;Eberkopf
-LOCATION;Heulende Hütte
-LOCATION;Hogwarts
-LOCATION;Verbotener Wald
-LOCATION;Gringotts
-LOCATION;Weasleys Zauberhafte Zauberscherze
-LOCATION;Zaubereiministerium
-LOCATION;Grimmauldplatz Nr. 12
+SUSPECT;Fenrir Greyback;fenrir
+SUSPECT;Lucius Malfoy;luciu
+SUSPECT;Peter Pettigrew;peter
+SUSPECT;Draco Malfoy;draco
+SUSPECT;Greifer;greif
+SUSPECT;Bellatrix Lestrange;bella
+ITEM;Verhexter Besen;vhxbs
+ITEM;Verfluchte Halskette;vflhk
+ITEM;Liebestrank;lbstr
+ITEM;Vergifteter Met;vgfmt
+ITEM;Incendio;incdo
+ITEM;Stupor;stupr
+LOCATION;Herrenhaus der Malfoys;hrhmf
+LOCATION;Eberkopf;ebkpf
+LOCATION;Heulende Hütte;hlhue
+LOCATION;Hogwarts;hgwts
+LOCATION;Verbotener Wald;vbtwl
+LOCATION;Gringotts;grngg
+LOCATION;Weasleys Zauberhafte Zauberscherze;weazz
+LOCATION;Zaubereiministerium;zaubm
+LOCATION;Grimmauldplatz Nr. 12;grp12
